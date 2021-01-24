@@ -38,6 +38,7 @@ def apply_clearance(cart)
   if cart[counter][:clearance]
     item_price = clearance_calc(item_price)
     end 
+    counter += 1 
   end 
   cart 
 end
