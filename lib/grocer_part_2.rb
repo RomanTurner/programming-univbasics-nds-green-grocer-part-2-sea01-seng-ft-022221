@@ -50,6 +50,7 @@ def checkout(cart, coupons)
   final_cart = apply_clearance(couponed_cart)
   total = 0 
   counter = 0 
+  binding.pry
   while counter < final_cart.length
   total = final_cart[counter][:price] * final_cart[counter][:count]
   counter += 1 
