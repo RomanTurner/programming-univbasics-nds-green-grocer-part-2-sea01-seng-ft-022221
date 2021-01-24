@@ -49,10 +49,11 @@ def checkout(cart, coupons)
   
   total = 0 
   count = 0 
-  binding.pry
+  
   while counter < final_cart.length
   total = final_cart[counter][:price] * final_cart[counter][:count]
   counter += 1 
+  binding.pry
 end 
 if total > 100
   total -= (total.to_f * 0.10)
