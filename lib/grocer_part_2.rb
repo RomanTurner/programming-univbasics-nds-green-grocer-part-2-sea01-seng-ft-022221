@@ -54,7 +54,7 @@ def checkout(cart, coupons)
   count += 1 
 end 
 if total > 100
-  total -= total.to_f * 0.1 
+  total -= (total.to_f * 0.1)
 end
 total 
 end 
