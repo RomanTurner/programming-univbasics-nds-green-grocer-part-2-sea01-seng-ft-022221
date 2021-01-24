@@ -1,5 +1,5 @@
 require_relative './part_1_solution.rb'
-
+require 'pry'
 def apply_coupons(cart, coupons)
   counter = 0 
   while counter < coupons.length 
@@ -46,6 +46,7 @@ def checkout(cart, coupons)
   consolidated_cart = consolidate_cart(cart)
   couponed_cart = apply_coupons(consolidated_cart, coupons)
   final_cart = apply_clearance(couponed_cart)
+  
   total = 0 
   count = 0 
   
@@ -56,5 +57,6 @@ end
 if total > 100
   total -= (total.to_f * 0.10)
 end
+binding.pry
 total 
 end 
