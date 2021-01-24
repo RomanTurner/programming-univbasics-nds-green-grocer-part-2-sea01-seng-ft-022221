@@ -27,16 +27,13 @@ def apply_coupons(cart, coupons)
   cart
 end 
 
-def clearance_calc(n)
-  percent = n.to_f * 0.2 
-  n -= percent
-end
+
 
 def apply_clearance(cart)
   counter = 0 
   while counter < cart.length 
   if cart[counter][:clearance]
-   cart[counter][:price]  = clearance_calc(cart[counter][:price])
+   cart[counter][:price]  -= ((cart[counter][:price]) * 0.2)
     end 
     counter += 1 
   end 
